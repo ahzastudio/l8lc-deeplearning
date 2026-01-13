@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Documentation - Deep Learning Land Cover Toolbox" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<title>{frontmatter.title} - Ahza Studio</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-slate-950 text-slate-300">
+		
+		<!-- Background -->
+		<div class="fixed inset-0 pointer-events-none z-0">
+			<!-- Background Noise/Glow Elements -->
+			<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/10 rounded-full blur-[120px]"></div>
+			<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px]"></div>
+		</div>
+
+		<!-- Navbar -->
+		<Header />
+
+		<div class="container mx-auto px-6 py-24 flex flex-col md:flex-row gap-12 relative z-10">
+			
+			<!-- Sidebar -->
+			<aside class="w-full md:w-64 shrink-0 hidden md:block">
+				<div class="sticky top-32 space-y-8 p-6 glass-card rounded-2xl border border-white/5">
+					<div>
+						<h3 class="font-bold text-emerald-400 mb-4 tracking-wider uppercase text-xs">Getting Started</h3>
+						<ul class="space-y-2 text-sm border-l border-white/10 ml-1">
+							<li><a href="#persiapan-awal" class="block pl-4 py-1 border-l border-transparent hover:border-emerald-500 text-slate-400 hover:text-white transition-colors">Persiapan Awal</a></li>
+							<li><a href="#step-1-libs" class="block pl-4 py-1 border-l border-transparent hover:border-emerald-500 text-slate-400 hover:text-white transition-colors">1. Install Libraries</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-emerald-400 mb-4 tracking-wider uppercase text-xs">Tools Guide</h3>
+						<ul class="space-y-2 text-sm border-l border-white/10 ml-1">
+							<li><a href="#step-2-manage" class="block pl-4 py-1 border-l border-transparent hover:border-emerald-500 text-slate-400 hover:text-white transition-colors">2. Manage Landsat 8</a></li>
+							<li><a href="#step-3-classify" class="block pl-4 py-1 border-l border-transparent hover:border-emerald-500 text-slate-400 hover:text-white transition-colors">3. Classify Land Cover</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-emerald-400 mb-4 tracking-wider uppercase text-xs">Support</h3>
+						<ul class="space-y-2 text-sm border-l border-white/10 ml-1">
+							<li><a href="#troubleshooting" class="block pl-4 py-1 border-l border-transparent hover:border-emerald-500 text-slate-400 hover:text-white transition-colors">Troubleshooting</a></li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+
+			<!-- Content -->
+			<main class="prose prose-invert prose-emerald max-w-4xl w-full">
+				<!-- Mobile TOC trigger could go here -->
+				<div class="glass-card p-8 md:p-12 rounded-3xl border border-emerald-500/20 shadow-2xl shadow-emerald-900/10">
+					<slot />
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
