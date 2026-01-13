@@ -213,7 +213,48 @@ Tool ini secara otomatis memetakan piksel ke dalam kelas tutupan lahan standar S
   </table>
 </div>
 
+
 <hr class="border-t border-white/10 my-16" />
+
+<h2 id="check-license" class="text-3xl font-extrabold text-white mb-8 mt-16 scroll-mt-32">🔑 Cek Lisensi & Machine ID</h2>
+
+<div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+  <p class="text-slate-400 mb-4">
+    Untuk melakukan pemesanan lisensi Pro, Anda memerlukan <strong>Machine ID</strong> komputer Anda. Ikuti langkah berikut untuk mendapatkannya:
+  </p>
+  
+  <div class="grid md:grid-cols-2 gap-6">
+    <ol class="space-y-4 text-sm text-slate-300 list-decimal pl-4">
+      <li class="pl-2">
+        Buka ArcGIS Pro dan akses <strong>Catalog Pane</strong>.
+      </li>
+      <li class="pl-2">
+        Buka toolbox <strong>Deep Learning Land Cover</strong>.
+      </li>
+      <li class="pl-2">
+        Klik dua kali pada tool <strong>Check License Status</strong> (ikon kunci).
+      </li>
+      <li class="pl-2">
+        Klik <strong>Run</strong> tanpa mengubah parameter apapun.
+      </li>
+      <li class="pl-2">
+        Setelah selesai, klik <strong>View Details</strong> pada jendela hasil.
+      </li>
+      <li class="pl-2">
+        Salin kode unik yang tertera pada baris <strong>ID Mesin</strong>.
+      </li>
+    </ol>
+    <div class="bg-black/30 rounded-xl p-4 flex items-center justify-center border border-white/5">
+        <div class="text-center">
+            <div class="text-xs text-slate-500 mb-2">Contoh Tampilan Output</div>
+            <div class="font-mono text-emerald-400 text-sm bg-black/50 p-2 rounded border border-white/10">ID Mesin : BFEBFBFF000306A9</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<hr class="border-t border-white/10 my-16" />
+
 
 <h2 id="troubleshooting" class="text-3xl font-extrabold text-white mb-8 mt-16 scroll-mt-32">❓ Pemecahan Masalah (Troubleshooting)</h2>
 
