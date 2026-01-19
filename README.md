@@ -1,6 +1,6 @@
 # Deep Learning Land Cover Toolbox v2.1.0
 
-![Toolbox Header](logo-ahza.png)
+<img src="logo-ahza.png" width="200" alt="Ahza Studio Logo">
 
 ## Deskripsi
 Toolbox ArcGIS Pro untuk klasifikasi tutupan lahan otomatis menggunakan model Deep Learning (AI). Dirancang khusus untuk memproses Citra Landsat 8 (Level 2 Surface Reflectance) dengan akurasi tinggi dan standar klasifikasi SNI Indonesia.
